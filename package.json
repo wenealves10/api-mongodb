@@ -1,0 +1,25 @@
+{
+  "name": "api-mongodb",
+  "version": "1.0.0",
+  "description": "this API will be connected to the MongoDB database.",
+  "main": "server.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenealves10/api-mongodb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wenealves10/api-mongodb/issues"
+  },
+  "homepage": "https://github.com/wenealves10/api-mongodb#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}
