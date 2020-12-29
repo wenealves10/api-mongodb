@@ -4,8 +4,8 @@
   "description": "this API will be connected to the MongoDB database.",
   "main": "server.js",
   "scripts": {
-    "start":"nodemon ./src/server.js --ignore public --ignore frontend --ignore node_modules",
-    "dev":"webpack -w"
+    "start": "nodemon ./src/server.js --ignore public --ignore frontend --ignore node_modules",
+    "dev": "webpack -w"
   },
   "repository": {
     "type": "git",
@@ -19,15 +19,17 @@
   },
   "homepage": "https://github.com/wenealves10/api-mongodb#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "core-js": "^3.3.2",
     "cors": "^2.8.5",
+    "css-loader": "^5.0.1",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "core-js": "^3.3.2",
+    "jsonwebtoken": "^8.5.1",
     "regenerator-runtime": "^0.13.3",
-    "style-loader": "^2.0.0",
-    "css-loader": "^5.0.1"
+    "style-loader": "^2.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.8",
