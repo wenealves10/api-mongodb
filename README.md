@@ -1,2 +1,2 @@
 # mvc-back-client
-this API will be connected to the MongoDB database.
+this mvc-back-client will be connected to the MongoDB database.
