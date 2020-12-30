@@ -5,6 +5,10 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 
+// website security
+const helmet = require('helmet');
+const csrf = require('csurf');
+const {  csurfError, csurfMiddleware } = require('../middlewares/middlewares');
 // Mongoose
 const mongoose = require('mongoose');
 
@@ -27,6 +31,8 @@ const configs = {
     host: process.env.HOST || "127.0.0.1"
 }
 
+// Helmet
+app.use(helmet());
 // Config Server
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
@@ -49,6 +55,11 @@ const sessionOptions = session({
 });
 app.use(sessionOptions);
 app.use(flash());
+
+// CSURF 
+app.use(csrf());
+ app.use(csurfError);
+app.use(csurfMiddleware);
 
 // routes 
 const routes = require('../routes/users.routes');
