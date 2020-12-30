@@ -5,6 +5,16 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 
+// Mongoose
+const mongoose = require('mongoose');
+
+mongoose.connect(process.env.CONNECTDB,{ useNewUrlParser: true,  useUnifiedTopology: true}).then(() =>{
+    app.emit('db-started');
+    console.log('Started the mongodb');
+}).catch((e) =>{
+    console.log(e);
+});
+
 // Config Ports and HOST
 const configs = {
     port: process.env.PORT || 8080,
