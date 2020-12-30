@@ -3,6 +3,8 @@
     <h1>Hello World full mvc</h1>
     Nome: <%= users.name %><br>
     Idade: <%= users.year %><br>
-    Login: <%= users.login != false ? 'Sim' : 'Não' %> 
+    Login: <%= users.login != false ? 'Sim' : 'Não' %><br>
+    token: <%= csrfToken %> 
+    
     
 <%- include('includes/footer.ejs') %> 
